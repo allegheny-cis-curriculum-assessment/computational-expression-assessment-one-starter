@@ -106,6 +106,7 @@ def read_file(file_name: str) -> List[str]:
 # The function convert_values_to_float should:
 # --> Accept a list that contains string values
 # --> Convert each string value in the list to a float value
+# --> Append the converted float value to a list of floats
 # --> Return a list that contains float values
 # --> Ensure that every value that appeared in the input
 # list as a string appears in the output list as a float
