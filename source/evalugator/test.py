@@ -61,6 +61,8 @@ def test_part_two():
         assert isinstance(part_two_output, list) is True
         # check: each entry in the output should be a float
         assert all(isinstance(entry, float) for entry in part_two_output)
+        # check: confirm that the correct value is in the first index
+        assert part_two_output[0] == 34.64
         # all of the assertions passed
         return True
     except AssertionError:
