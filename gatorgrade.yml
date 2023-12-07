@@ -16,7 +16,7 @@ setup: |
         fragment: "Add Your Name Here"
         count: 0
         exact: true
-    - description: Retype the every word in the Honor Code pledge in README.md
+    - description: Retype every word in the Honor Code pledge in README.md
       check: MatchFileFragment
       objectives: "LO4"
       options:
