@@ -220,7 +220,7 @@ def convert_fahrenheit_values_to_rankine(
 # point numbers that are inside a list of temperatures encoded in any scale.
 
 # Function specification:
-# The function count_values should:
+# The function count_temperature_values should:
 # --> Accept a list that contains float values of temperatures
 # --> Count the number of values inside of the list
 # --> Return the count of the number of values in the list
