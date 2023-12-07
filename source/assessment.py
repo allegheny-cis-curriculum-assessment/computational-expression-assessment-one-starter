@@ -1,5 +1,6 @@
 """An assessment for the Computational Expression course."""
 
+from pathlib import Path
 from typing import List, Tuple
 
 from evalugator import constants, run, test
