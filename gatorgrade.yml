@@ -43,12 +43,12 @@ setup: |
 
 # run a command: ruff check with default settings found in .ruff.toml file
 - description: Ensure that the source code follows an industry-standard programming rules using the command 'ruff check'
-  objectives: "LO2, LO5"
+  objectives: "LO2,LO5"
   command: ruff check source/assessment.py
 
 # run a command: ruff format with default settings found in .ruff.toml file
 - description: Ensure that the source code adheres to an industry-standard format using the command 'ruff format'
-  objectives: "LO2, LO5"
+  objectives: "LO2,LO5"
   command: ruff format source/assessment.py --check
 
 # }}}
@@ -58,7 +58,7 @@ setup: |
 # run the program and confirm the existence of fragments in its output
 - description: "Run a program and confirm the correct number of non-blank lines in the output when running the assessment.py program"
   check: CountCommandOutput
-  objectives: "LO2, LO5"
+  objectives: "LO2,LO5"
   options:
     command: "python source/assessment.py"
     count: 6
@@ -117,7 +117,7 @@ setup: |
 # run the program and confirm the existence of fragments in its output
 - description: "Run the program and confirm the existence of correct output for part six of the assessment"
   check: MatchCommandFragment
-  objectives: "LO1, LO5"
+  objectives: "LO1,LO5"
   options:
     command: "python source/assessment.py"
     fragment: "(0.0, 0.0, 0.0) / (20.0, 0.0, 10.0) / (30.0, 0.0, 15.0) / (0.0, 0.0, 0.0) / True"
