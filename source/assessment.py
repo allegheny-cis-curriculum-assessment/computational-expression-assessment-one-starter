@@ -28,7 +28,7 @@ from evalugator import constants, run, test
 # values in the Rankine scale. The Python program that you implement should
 # also be capable of analyzing the temperature values recorded in the Rankine
 # scale, computing, for instance, the minimum, maximum, and average temperature
-# values in the file. The program should be suitaable for NASA engineers to
+# values in the file. The program should be suitable for NASA engineers to
 # analyze temperature variation for values recorded in the Rankine scale.
 
 # These are the steps that the program should complete in separate functions:
