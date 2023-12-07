@@ -192,6 +192,7 @@ def convert_celsius_values_to_farhenheit(
 # --> Convert each float value from Fahrenheit to Rankine
 # --> Round each temperature value in the Rankine scale
 #     to two digits after the decimal point
+# --> Append the converted float value to a list of floats
 # --> Return a list that contains float values, with each
 #     value encoding a temperature in the Rankine scale
 
