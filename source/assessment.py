@@ -144,7 +144,7 @@ def convert_values_to_float(temperature_readings_celsius: List[str]) -> List[flo
 # --> Round each temperature value in the Fahrenheit scale
 #     to two digits after the decimal point
 # --> Append the converted float value to a list of floats
-# --> Return a list that contains float values, with each
+# --> Return the list that contains the float values, with each
 #     value encoding a temperature in the Farhenheit scale
 
 
