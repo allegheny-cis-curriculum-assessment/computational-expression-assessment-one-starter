@@ -103,7 +103,7 @@ def read_file(file_name: str) -> List[str]:
 # function adheres to all aspects of the following specification.
 
 # Function specification:
-# The function convert_values should:
+# The function convert_values_to_float should:
 # --> Accept a list that contains string values
 # --> Convert each string value in the list to a float value
 # --> Return a list that contains float values
