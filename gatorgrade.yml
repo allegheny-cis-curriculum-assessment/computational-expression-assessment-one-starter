@@ -1,0 +1,141 @@
+setup: |
+  echo "🐊 Attempt to install ruff"
+  echo "🐊 Will not re-install if already installed"
+  pipx install ruff
+---
+
+# Assessment of Honor Code {{{
+
+- README.md:
+    - description: Ensure that the README.md file exists inside of the root of the GitHub repository
+      check: ConfirmFileExists
+    - description: Delete the phrase 'Add Your Name Here' and add your own name as an Honor Code pledge in README.md
+      check: MatchFileFragment
+      objectives: "LO4"
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+    - description: Retype the every word in the Honor Code pledge in README.md
+      check: MatchFileFragment
+      objectives: "LO4"
+      options:
+        fragment: "I adhered to the Allegheny College Honor Code while completing this assessment."
+        count: 2
+        exact: true
+
+# }}}
+
+# Assessment of Program Characteristics {{{
+
+# perform checks on the assessment.py file
+- source/assessment.py:
+    - description: Ensure that assessment.py file exists in the source/ directory
+      check: ConfirmFileExists
+      objectives: "LO5"
+    - description: Complete all TODOs, remove the TODO markers, and rewrite comments for assessment.py
+      check: MatchFileFragment
+      objectives: "LO5"
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+
+# run a command: ruff check with default settings found in .ruff.toml file
+- description: Ensure that the source code follows an industry-standard programming rules using the command 'ruff check'
+  objectives: "LO2, LO5"
+  command: ruff check source/assessment.py
+
+# run a command: ruff format with default settings found in .ruff.toml file
+- description: Ensure that the source code adheres to an industry-standard format using the command 'ruff format'
+  objectives: "LO2, LO5"
+  command: ruff format source/assessment.py --check
+
+# }}}
+
+# Assessment Based on Program Output {{{
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run a program and confirm the correct number of non-blank lines in the output when running the assessment.py program"
+  check: CountCommandOutput
+  objectives: "LO2, LO5"
+  options:
+    command: "python source/assessment.py"
+    count: 6
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part one of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO1"
+  options:
+    command: "python source/assessment.py"
+    fragment: "10 / <class 'list'> / True"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part two of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO5"
+  options:
+    command: "python source/assessment.py"
+    fragment: "10 / <class 'str'> / <class 'float'> / True"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part three of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO3"
+  options:
+    command: "python source/assessment.py"
+    fragment: "3 / [0.0, 10.0, 20.0] / [32.0, 50.0, 68.0] / True"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part four of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO5"
+  options:
+    command: "python source/assessment.py"
+    fragment: "3 / [0.0, 10.0, 20.0] / [32.0, 50.0, 68.0] / [491.67, 509.67, 527.67] / True"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part five of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO1"
+  options:
+    command: "python source/assessment.py"
+    fragment: "1 / 3 / 4 / 0 / True"
+    count: 1
+    exact: true
+
+# run the program and confirm the existence of fragments in its output
+- description: "Run the program and confirm the existence of correct output for part six of the assessment"
+  check: MatchCommandFragment
+  objectives: "LO1, LO5"
+  options:
+    command: "python source/assessment.py"
+    fragment: "(0.0, 0.0, 0.0) / (20.0, 0.0, 10.0) / (30.0, 0.0, 15.0) / (0.0, 0.0, 0.0) / True"
+    count: 1
+    exact: true
+
+# }}}
+
+# Assessment based on the program having the correct return value for the programming task of part six {{{
+
+# perform a check on the source code of the assessment.py file
+- source/assessment.py:
+    - description: "Confirm that the program contains the correct return statement for part six of the assessment"
+      check: MatchFileFragment
+      objectives: "LO3"
+      options:
+        fragment: "(temperature_maximum, temperature_minimum, temperature_average)"
+        count: 1
+        exact: true
+
+# }}}
