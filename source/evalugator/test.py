@@ -164,7 +164,6 @@ def test_part_six():
         assert len(value_analysis_empty) == 3
         # check: each of the values is a zero
         assert all(entry == 0.0 for entry in value_analysis_empty)
-        # all of the assertions passed
         # --> third input
         # check: the output should be a tuple of floats
         assert isinstance(value_analysis_non_empty, tuple) is True
