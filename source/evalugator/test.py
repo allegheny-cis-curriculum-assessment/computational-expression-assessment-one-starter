@@ -62,6 +62,7 @@ def test_part_two():
         # check: each entry in the output should be a float
         assert all(isinstance(entry, float) for entry in part_two_output)
         # check: confirm that the correct value is in the first index
+        # (note, not checking all of the index location for this test)
         assert part_two_output[0] == 34.64
         # all of the assertions passed
         return True
