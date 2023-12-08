@@ -79,13 +79,13 @@ from evalugator import constants, run, test
 # each entry in the list is a single data value
 
 
-def read_file(file_name: str) -> List[str]:
+def read_file(file_name):
     """Read and return the contents of a file at the provided path directory."""
     temperature_readings_celsius: List[str] = []
     # TODO: delete the following line of source code
     # as it is a placeholder for the correct implementation
     temperature_readings_celsius = [0.0, 1.0, 2.0]
-    # TODO: create a Path object from the file_name
+    # TODO: open file for reading
     # TODO: read the contents of the file into a string
     # TODO: split the string into a list of lines
     # return the temperature readings (in Celsius degrees)
@@ -115,7 +115,7 @@ def read_file(file_name: str) -> List[str]:
 # then the function should raise a ValueError exception
 
 
-def convert_values_to_float(temperature_readings_celsius: List[str]) -> List[float]:
+def convert_values_to_float(temperature_readings_celsius):
     """Convert the values in a list from type string to type float."""
     # create an empty list of floats to contain the values
     temperature_readings_celsius_float: List[float] = []
@@ -149,9 +149,7 @@ def convert_values_to_float(temperature_readings_celsius: List[str]) -> List[flo
 #     value encoding a temperature in the Farhenheit scale
 
 
-def convert_celsius_values_to_farhenheit(
-    temperature_readings_celsius: List[float],
-) -> List[float]:
+def convert_celsius_values_to_farhenheit(temperature_readings_celsius):
     """Convert the temperature values in a list from the Celsius to the Fahrenheit scale."""
     # create an empty list of floats to contain the values in the Fahrenheit scale
     temperature_readings_fahrenheit_float: List[float] = []
@@ -198,9 +196,7 @@ def convert_celsius_values_to_farhenheit(
 #     value encoding a temperature in the Rankine scale
 
 
-def convert_fahrenheit_values_to_rankine(
-    temperature_readings_fahrenheit: List[float],
-) -> List[float]:
+def convert_fahrenheit_values_to_rankine(temperature_readings_fahrenheit):
     """Convert the temperature values in a list from the Fahrenheit scale to the Rankine scale."""
     # create an empty list of floats to contain the values in the Rankine scale
     temperature_readings_rankine_float: List[float] = []
@@ -227,9 +223,7 @@ def convert_fahrenheit_values_to_rankine(
 # --> Return the count of the number of values in the list
 
 
-def count_temperature_values(
-    temperature_readings: List[float],
-) -> int:
+def count_temperature_values(temperature_readings):
     """Count the number of values in a list of temperatures."""
     # TODO: delete the following line of source code
     # as it is a placeholder for the correct implementation
@@ -277,9 +271,7 @@ def count_temperature_values(
 # code itself all adhere to the industry standards enforced by the ruff tool.
 
 
-def analyze_temperature_values(
-    temperature_readings: List[float],
-) -> Tuple[float, float, float]:
+def analyze_temperature_values(temperature_readings):
     """Compute the minimum, maximum, and average values of the list of temperatures"""
     # there are temperature readings and thus they should be analyzed
     if temperature_readings:
